@@ -39,9 +39,32 @@
             width:100px;
             height:100px;
         }
+
+        #float {
+            float:right;
+            border : 1px solid grey;
+            width:50px;
+            height:100px;
+        }
+
+        nav li {
+            border : 1px solid grey;
+            display : inline-block;
+            list-style-type: none;
+            margin-right : 20px;
+        }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ul>
+
+    </nav>
+
     <div id="container">
         <div>1</div>
         <div id="second">2</div>
@@ -50,6 +73,19 @@
         <div>5</div>
     </div>
 
+
+    <div>
+        <p id="float">
+            float float float float
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+    
+    </div>
+    
     <footer>
         <div>fixed</div>
     </footer>
