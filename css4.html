@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 표준단위</title> 
+    <style>
+        body {
+            font-size : 10px;
+        }
+        div#em div {
+            font-size: 2em; /* 부모 기준 2배 */
+        }
+        div#rem div{
+            font-size: 2rem; /* HTML 의 기준 2배 */
+        }   
+        div#per div{
+            font-size: 200%; /* 부모 기준 200% */
+        }      
+    </style>
+</head>
+<body>
+    <div id="em"> 16px
+        <div> 2em
+            <div> 2em
+                <div> 2em </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rem">16px
+        <div> 2rem
+            <div> 2rem
+                <div>2rem</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="per">16px
+        <div> 200%
+            <div> 200%
+                <div>200%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

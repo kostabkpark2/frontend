@@ -4,9 +4,19 @@
 }
 
 /* 태그 이름 셀렉터 */
+div {
+    color : blueviolet;
+    background-color: gold;
+    border : dotted  olivedrab;
+}
+
 li {
     background-color: lightblue;
 }
+
+/* a {
+    text-decoration: none;
+} */
 
 /* 셀렉터 조합하기 */
 ul>li,
@@ -22,11 +32,15 @@ ol span {
 #css {
     color: red;
 }
+body#main {
+    background-color: linen;
+}
 
 /* class 셀렉터 */
 .title {
     color: brown;
 }
+
 
 /* 가상 클래스(pseudo-class) 셀렉터 */
 li:hover {
