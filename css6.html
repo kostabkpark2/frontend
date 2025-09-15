@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인박스와 블록박스</title>
+    <style>
+        /* 블록 박스 - div, p, ul, li, h1~h6 */
+        div {
+            border: solid yellowgreen;
+            border-width : 2px;
+        }
+
+        p {
+            border: solid silver;
+            border-width : 2px;
+        }
+        ul, li {
+            border: solid silver;
+            border-width : 2px;
+        } 
+        /* 인라인 박스 - a, span, img */
+        span {
+            background-color: mistyrose;
+        }
+        /* display : block  연습 */
+        .container > span {
+            display:block;
+            border: 1px solid blue;
+            width:100px;
+            height:50px;
+            margin:20px;
+            padding:10px;
+        }
+        /* display : inline  연습 */
+        .container > div {
+            display:inline;
+            border: 1px solid blue;
+            /* width:100px;
+            height:50px; */
+            padding:10px;
+            margin-right : 10px;
+        }
+        /* display : inline-block  연습 */
+        .container > p {
+            display:inline-block;
+            border: 1px solid blue;
+            width:100px;
+            height:50px;
+            padding:10px;
+            margin : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>display : block</h1>
+    <hr>
+    <div class="container">
+        <span>block</span>
+        <span>block</span>
+        <span>block</span>
+    </div>
+
+    <h1>display : inline</h1>
+    <hr>
+    <div class="container">
+        <div>inline</div>
+        <div>inline</div>
+        <div>inline</div>
+    </div>
+
+    <h1>display : inline-block</h1>
+    <hr>
+    <div class="container">
+        <p>inline-block</p>
+        <p>inline-block</p>
+        <p>inline-block</p>
+    </div>
+
+    <hr>
+    <div>DIV 안에 <span>span</span>과 <span>span</span></div><div>DIV 안에 <span>span</span>과 <span>span</span></div><div>DIV 안에 <span>span</span>과 <span>span</span></div>
+
+    <p>paragraph</p>
+    <p>paragraph</p>
+    <p>paragraph</p>
+
+    <ul> 리스트
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+ 
+
+
+</body>
+</html>
