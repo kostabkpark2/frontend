@@ -4,35 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /* 태그 이름 셀렉터 */
-        li {
-            background-color: lightblue;
-        }
-        /* id 셀렉터 */
-        #css {
-            color:red;
-        }
-        /* class 셀렉터 */
-        .title {
-            color : brown;
-        }
-    </style>
+    <!-- link 태그 이용 -->
+    <link rel="stylesheet" href="css/mystyle.css">
+    <!-- @import 이용 -->
+    <!-- <style>
+        @import url(css/mystyle.css);
+    </style> -->
 </head>
 <body>
     <h1>웹 프로그래밍</h1>
     <hr>
+    <a href="https://www.naver.com">네이버</a>
+    <a href="https://pypi.org/">pypi</a>
     <div class="title">이번 학기 학습내용</div>
     <ul>
         <li>HTML5</li>
         <li id="css">CSS3</li>
-        <li>JAVASCRIPT</li>
+        <li>JAVASCRIPT <span>jquery</span></li>
     </ul>
     <div class="title">이번 학기 학습내용</div>
     <ol>
         <li>HTML5</li>
         <li>CSS3</li>
-        <li>JAVASCRIPT</li>
+        <li><span>JAVASCRIPT</span></li>
     </ol>
 </body>
 </html>

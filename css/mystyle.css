@@ -1,0 +1,39 @@
+/* 모든 태그에 적용 */
+* {
+    color: green;
+}
+
+/* 태그 이름 셀렉터 */
+li {
+    background-color: lightblue;
+}
+
+/* 셀렉터 조합하기 */
+ul>li,
+ol>li {
+    color: black;
+}
+
+ol span {
+    color: black;
+}
+
+/* id 셀렉터 */
+#css {
+    color: red;
+}
+
+/* class 셀렉터 */
+.title {
+    color: brown;
+}
+
+/* 가상 클래스(pseudo-class) 셀렉터 */
+li:hover {
+    background: yellowgreen;
+    color: red;
+}
+
+a:visited {
+    color: red;
+}
