@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes textColorAnimation {
+            0% {color: blue;}
+            50% {color: green;}
+            100% {color: red}
+        }
+        @keyframes textSizeAnimation {
+            from {font-size: 500%;}
+            to {font-size: 100%;}
+        }
+        @keyframes boxMoveAnimation {
+            from {
+                left:0px;
+            }
+            to {
+                left:500px;
+            }
+        }
+        span {
+            animation-name: textSizeAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+        #container {
+            position:absolute;
+            top:100px;
+            left:20px;
+            width: 100%;
+            height:10%;
+            border:1px solid gray;
+        }   
+        #container>#box {
+            position:absolute;
+            width: 10px;
+            height: 10px;
+            background-color:red;
+            animation-name: boxMoveAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>애니메이션</h1>
+    <hr>
+    <div id="container">
+        <div id="box"></div>
+    </div>
+</body>
+</html>
