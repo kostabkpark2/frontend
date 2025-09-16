@@ -6,9 +6,12 @@
     <title>Position</title>
     <style>
         #container {
+            position:relative;
             border : 1px solid grey;
             width:300px;
             height:300px;
+            top:100px;
+            left:100px;
         }
         #container > div {
             display : inline-block;
@@ -20,15 +23,39 @@
             background-color: red;
         }
 
-        #container>div#second {
+        #container>div#right:hover {
             position: relative;
             top:10px;
             left:10px;
         }
-        #container>div#fourth {
+        #container>div#left:hover {
             position: relative;
             top:10px;
             right:10px;
+        }
+
+        #container>div#s {
+            position: absolute;
+            top:100px;
+            left:50px;
+        }
+
+        #container>div#t {
+            position: absolute;
+            top:150px;
+            right:50px;
+        }
+
+        #container>div#a {
+            position: absolute;
+            bottom:30px;
+            right:50px;
+        }
+
+        #container>div#r {
+            position: absolute;
+            bottom:10px;
+            left:30px;
         }
 
         footer > div {
@@ -65,12 +92,19 @@
 
     </nav>
 
+
+
     <div id="container">
         <div>1</div>
-        <div id="second">2</div>
+        <div id="right">2</div>
         <div>3</div>
-        <div id="fourth">4</div>
+        <div id="left">4</div>
         <div>5</div>
+
+        <div id="s">S</div>
+        <div id="t">T</div>
+        <div id="a">A</div>
+        <div id="r">R</div>
     </div>
 
 
