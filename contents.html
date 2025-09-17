@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>document.write() 활용</h3>
+    <hr>
+    <script>
+        // document.write("<h3> 덧셈 </h3>");
+        // document.write("2 + 3 <br>");
+        // document.write("의 결과는 5입니다.");
+        // var data = prompt("숫자를 입력하세요");
+        // if(data == null) {
+        //     console.log("입력받은 값이 없습니다.");
+        // } else {
+        //     console.log(data);
+        // }
+
+        // var data = confirm("삭제하시겠습니까?");
+        // if(data == true) {
+        //     console.log("삭제되었습니다.");
+        // } else {
+        //     console.log("삭제되지 않았습니다.");
+        // }
+        // console.log("\:홍길동");
+        // x = 3; y = 5;
+        // ret = (x > y) ? x : y ;
+        // console.log(ret);
+        data = "hello";
+
+        switch(data) {
+            case 1:
+            case 1.2:
+                console.log("1 또는 1.2 입니다.");
+                break;
+            case "hello":
+                console.log("hello 입니다.");
+                break;
+            case true:
+                console.log("참입니다.");
+                break;
+            case 2+3:
+                console.log("5입니다.");
+        }
+
+    </script>
+</body>
+</html>

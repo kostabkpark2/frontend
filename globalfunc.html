@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 사용자로부터 숫자를 1개 입력받아서 100 과 입력받은 숫자를 더한 후 결과를 출력하세요 */
+        /* 단, 문자를 입력하면 숫자와 문자가 더해지므로 while 문을 써서 숫자를 입력받을 때 까지 반복 */
+        let data = "a";
+        while(isNaN(data)) {
+            data = prompt("숫자를 입력하세요");
+        }
+        data = parseInt(data);
+        console.log(100+data);
+    </script>
+</body>
+</html>
