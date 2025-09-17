@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>학생의 점수 처리
+    <hr>
+    </h1>
+    <script>
+        /* 학생의 점수를 입력받아서 배열에 저장 
+            입력값이 end 이면 종료, 숫자가 아니면 배열에 저장하지 않는다
+            0보다 작거나, 100 보다 크면 저장하지 않는다.
+
+            입력이 종료되면 총합과 인원수, 평균을 출력한다.
+            */
+            let data="";
+            let scores = [];
+            let count = 0;
+            while(true) {
+                data = prompt("학생의 점수(0~100)를 입력하세요. 종료하려면 end 를 입력하세요.");
+                if(data == null || (isNaN(data) && data.toLowerCase() == 'end')) {
+                    break;
+                }
+                if(isFinite(data)){
+                    if (data < 0 || data > 100) {
+                        continue;          
+                    } 
+                    scores[count++]=data;
+                }
+            };
+
+            console.log(scores);
+            let sum = 0;
+            for(let i=0; i<scores.length; i++) {
+                sum += parseInt(scores[i]);
+            }
+            console.log(sum, sum/scores.length, scores.length);
+    </script>
+
+
+</body>
+</html>

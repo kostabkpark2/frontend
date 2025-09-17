@@ -15,10 +15,19 @@
         //     func("hello","world");
         // }
 
-        // function add(a,b) {
-        //     console.log("콜백 함수가 호출되었습니다.");
-        //     console.log(a+b);
-        // }
+        function add(a,b) {
+            console.log("add 함수가 호출되었습니다.");
+            console.log(a+b);
+        }
+        function add1(a,b) {
+            console.log("add1 함수가 호출되었습니다.");
+            console.log(a+b);
+        }
+        function add2(a,b) {
+            console.log("add2 함수가 호출되었습니다.");
+            console.log(a+b);
+        }
+
         // console.log(add);
         // //add();
         // callTheOther(add);
@@ -27,21 +36,24 @@
         //     console.log(a+b);
         // } ) ;
 
-        setTimeout( 
-            function () {
-                console.log("1 초 후에 실행됩니다.");
-            } , 
-            1000 );
+        // setTimeout( 
+        //     function () {
+        //         console.log("1 초 후에 실행됩니다.");
+        //     } , 
+        //     1000 );
 
-        setInterval(
-            function () {
-                console.log("3 초에 한 번씩 실행됩니다.");
-            } ,
-            3000
-        );
+        // setInterval(
+        //     function () {
+        //         console.log("3 초에 한 번씩 실행됩니다.");
+        //     } ,
+        //     3000
+        // );
 
 
-
+        // 동기 함수의 실행
+        add(10,20);
+        add1(10,20);
+        add2(10,20);
 
 
     </script>
