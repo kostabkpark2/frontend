@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>콜백 함수</h1>
+    <hr>
+    <script>
+        // // 매개변수로 전달되는 함수 ==> 콜백 함수
+        // function callTheOther(  func     ) {
+        //     console.log(func);
+        //     func("hello","world");
+        // }
+
+        // function add(a,b) {
+        //     console.log("콜백 함수가 호출되었습니다.");
+        //     console.log(a+b);
+        // }
+        // console.log(add);
+        // //add();
+        // callTheOther(add);
+        // callTheOther ( function (a,b) {
+        //     console.log("콜백 함수가 호출되었습니다.");
+        //     console.log(a+b);
+        // } ) ;
+
+        setTimeout( 
+            function () {
+                console.log("1 초 후에 실행됩니다.");
+            } , 
+            1000 );
+
+        setInterval(
+            function () {
+                console.log("3 초에 한 번씩 실행됩니다.");
+            } ,
+            3000
+        );
+
+
+
+
+
+    </script>
+</body>
+</html>
