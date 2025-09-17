@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String 객체</h1>    
+    <hr>
+    <script> 
+        // 변수의 값 변경
+        let a = 3;
+        console.log(a);
+        a = 5;
+        console.log(a);
+        /* 문자열의 크기는 변하지 않는다. */
+        let s = "hello";
+        console.log(s.length);
+        s.length = 3;
+        console.log(s.length);
+        console.log(s[0]);
+
+        // 문자열에 사용할 수 있는 method 
+        // ==> trim(), split(), substr(), toUpperCase(), toLowerCase(), indexOf()
+        let str = "a,b,c";
+        let arr = str.split(",");
+        console.log(arr);
+        
+        let b = ' abc ';
+        console.log(b.trim());
+
+        let c = "helloworld";
+        console.log(c.substr(3,4));
+
+        let d = "helloworld";
+        console.log(d.toUpperCase());
+
+        // "10,20,30" < == prompt("숫자를 콤마로 구분해서 3개 입력해주세요");
+
+    </script>
+</body>
+</html>

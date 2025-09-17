@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/card.js"></script>
+</head>
+
+<body>
+    <!-- 1. html태그의 이벤트 리스너에 자바스크립트 코드 작성 -->
+    <img src='image/card_back.png' width='100px' height="140px" alt="card" onclick="this.src='image/card_front.jpg'">
+    <!-- 2. script태그에 자바스크립트 코드 작성 -->
+    <!-- 마우스가 이미지 위로 올라가면 앞면이 보이고, 이미지 밖으로 마우스가 벗어나면 뒷면이 보이도록 작성 -->
+    <!-- 매개변수가 없고, 반환값이 없는 함수 호출 -->
+    <!-- <img id="card" src='image/card_back.png' width='100px' height="140px" alt="card"
+    onmouseover="over()"
+    onmouseout="out()"> -->
+    <!-- 3. 별도 파일에 작성된 자바스크립트 코드 호출 -->
+    <!-- 마우스가 이미지 위로 올라가면 앞면이 보이고, 이미지 밖으로 마우스가 벗어나면 뒷면이 보이도록 작성 -->
+    <!-- 매개변수가 있고, 반환값이 없는 함수를 호출 -->
+    <img id="card" src='image/card_back.png' width='100px' height="140px" alt="card" onmouseover="over(this)"
+        onmouseout="out(this)"> <br>
+    <!-- 4. 링크의 href 에 자바스크립트 코드 작성 -->
+    <a href="javascript:alert('클릭하셨어요?')">click 해보세요.</a>
+</body>
+
+</html>
