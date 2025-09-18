@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ES6 문법 연습</h1>
+    <hr>
+    <script>
+        // 3-1. ES6 문법으로 클래스를 작성한 후 new 생성자로 객체 만드는 방법
+        // function Account(owner, code, balance) {
+        //     this.owner = owner;
+        //     this.code = code;
+        //     this.balance = balance;
+
+        //     this.inquiry = function () {
+        //         console.log(this.balance);
+        //     };
+        //     this.deposit = function () {};
+        //     this.withdraw = function () {};
+        // }
+
+        class Account {
+            constructor(owner, code, balance) {
+                this.owner = owner;
+                this.code = code;
+                this.balance = balance;
+            }
+            inquiry = () => console.log(this.balance);
+            deposit = () => {};
+            withdraw = () => {};
+        }
+
+        let acc1 = new Account("홍길동", "111", 10000);
+        let acc2 = new Account("james", "222", 20000);
+
+        // ES6 문법 연습 - for of / for in
+
+        let accounts = [acc1, acc2] ;
+        for (const acc of accounts) {
+            console.log(`account 출력 ${acc.code}, ${acc.inquiry}`);
+        }
+        for (const key in acc1) {
+            if (!Object.hasOwn(acc1, key)) continue;
+            
+            const element = acc1[key];
+            console.log(`account 출력 ${key}, ${element}`);
+            
+        }
+        // ES6 문법 연습 - 배열.foreach
+        accounts.forEach(
+                // 익명함수의 매개변수가 하나일 때  : 배열의 원소(element)
+                (acc) => console.log(acc)
+
+        );
+
+        accounts.forEach(
+                // 익명함수의 매개변수가 두 개 일 때  : 배열의 원소(element), 인덱스
+                (acc, index) => console.log(acc, index)
+
+        );
+        // ES6 문법 연습 - 배열.map
+        let arr = [5,7,3,2,4];
+        let double = arr.map(
+            (x) => x * 2
+        );
+        console.log(double);
+
+        // ES6 문법 연습 - 배열.filter
+        let even = arr.filter(
+            (ele) => {
+                return ele % 2 == 0;
+            }
+        );
+        console.log(even);
+
+    </script>
+</body>
+</html>
