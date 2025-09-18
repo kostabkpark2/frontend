@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>사용자 객체 만들기</h1>
+    <hr>
+    <script>
+        // 1. Object 를 이용해서 빈 객체 만든 다음 속성과 메소드 추가
+        // let account = new Object();
+
+        // account.owner = "홍길동";
+        // account.code = "111";
+        // account.balance = 10000;
+
+        // account.inquiry = function () {};
+        // account.deposit = function () {};
+        // account.withdraw = function () {};
+
+        // console.log(account);
+        // 2. 리터럴 표기법(JSON)으로 객체 만드는 방법, 
+        let account = {
+            owner : "홍길동",
+            code : "111",
+            balance : 10000,
+            inquiry : function () {} ,
+            deposit : function () {} ,
+            withdraw : function () {}
+        }
+        console.log(account);
+
+        // 3. 프로토타입 생성자 함수를 작성한 후 new 생성자로 객체 만드는 방법
+        function Account(owner, code, balance) {
+            this.owner = owner;
+            this.code = code;
+            this.balance = balance;
+
+            this.inquiry = function () {};
+            this.deposit = function () {};
+            this.withdraw = function () {};
+        }
+
+        let acc1 = new Account("홍길동", "111", 10000);
+        let acc2 = new Account("james", "222", 20000);
+        console.log(acc1);
+        console.log(acc2);
+
+    </script>
+</body>
+</html>
