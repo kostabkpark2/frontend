@@ -24,29 +24,30 @@
 
         <label for="ide">통합 개발환경을 선택해주세요:</label>
         <select name="ide" id="ide" onchange="changeIcon(this)">
-            <option value="eclipse">eclipse</option>
-            <option value="sts4">sts4</option>
-            <option value="vscode">vscode</option>
-            <option value="intellij">intellij</option>
+            <option value="0">eclipse</option>
+            <option value="1">sts4</option>
+            <option value="2">vscode</option>
+            <option value="3">intellij</option>
         </select>
         <img id="icon" src="image/eclipse.jfif" alt="icon" 
         width="30px" height="30px">
 
         <fieldset>
-            <legend>Choose your monster's features:</legend>
+            <legend>Choose languages :</legend>
 
-            <input type="checkbox" id="scales" name="scales" checked />
-            <label for="scales">Scales</label>
-            <input type="checkbox" id="horns" name="horns" />
-            <label for="horns">Horns</label>
-
+            <input type="checkbox" id="chk1" name="chk1" />
+            <label for="chk1">HTML</label>
+            <input type="checkbox" id="chk2" name="chk2"  />
+            <label for="chk2">CSS</label>
+            <input type="checkbox" id="chk3" name="chk3"  />
+            <label for="chk3">Javascript</label>
         </fieldset>
 
         <fieldset>
             <legend>Choose one : </legend>
-            <input type="radio" id="html" name="fav_language" value="HTML">
+            <input type="radio" id="html" name="fav_language" value="HTML" >
             <label for="html">HTML</label><br>
-            <input type="radio" id="css" name="fav_language" value="CSS">
+            <input type="radio" id="css" name="fav_language" value="CSS" >
             <label for="css">CSS</label><br>
             <input type="radio" id="javascript" name="fav_language" value="JavaScript">
             <label for="javascript">JavaScript</label>
@@ -72,10 +73,24 @@
         console.log(elements);
         elements[0].value="admin-firstElement";
 
+        // 체크박스의 모든 체크상자를 다 선택된 것으로 변경하기
+        document.login.chk1.checked = true;
+        document.login.chk2.checked = true;
+        document.login.chk3.checked = false;
+
+        // 라디오버튼의 첫번째 옵션을 선택한 것으로 변경하기
+        console.log("radio button", document.login.fav_language[0]);
+        document.login.fav_language[2].checked = true;
+
+        let imgArr = ["eclipse.jfif", "sts4.jfif", "vscode.jfif", "intellij.jfif"];
         function changeIcon(obj) {
             let icon = document.querySelector("#icon");
-            icon.src = "image/" + obj.value + ".jfif";
+            icon.src = "image/" + imgArr[obj.value] ;
+            let select = document.login.ide;
+            console.log(select.options, select.options[0].innerText, select.options[0].value,
+            select.selectedIndex);
         }
+
     </script>
 </body>
 
