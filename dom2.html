@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom 객체 찾기</h1>
+    <hr>
+    <div class="d">DIV1</div>
+    <div class="even">DIV2</div>
+    <div class="d">DIV3</div>
+    <div class="even">DIV4</div>
+    <div class="d">DIV5</div>
+    <div class="even">DIV6</div>
+    <script>
+        let divTags = document.getElementsByTagName("div");
+        console.log(divTags[0].innerHTML);
+        divTags[0].style.backgroundColor = "yellow";
+        
+        let oddTags = document.getElementsByClassName("d");
+        console.log(oddTags.length);
+        for (const odd of oddTags) {
+            odd.style.color = "red";
+        }
+    
+        let evenTag = document.querySelector('.even');
+        console.log(evenTag.innerHTML);
+        let evenTags = document.querySelectorAll('.even');
+        console.log(evenTags);
+        for (const even of evenTags) {
+            even.style.color = "blue";
+        }
+    </script>
+</body>
+</html>

@@ -5,27 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
 
+</head>
 <body>
     <h1>Dom 객체 알아보기</h1>
     <hr>
-    <p id="firstP" style="color:blue" onclick="this.style.backgroundColor='yellow'">
+    <p id="firstP" style="color:blue" onclick="change(this, '40px', 'violet')">
         이것은 <span id="span" style="color:red">문장입니다.</span>
     </p>
-    <button id="btn" onclick="changeColor()">클릭하세요</button>
+    <button id="btn" onclick="change(this, '10px', 'red')">클릭하세요</button>
+    <button id="btn2" onclick="change(this, '30px', 'blue')">클릭하세요</button>
     <script>
-        const button = document.getElementById("btn");
-        const p = document.getElementById("firstP");
-        console.log(button);
+        function change(obj, size, color) {
+            obj.style.fontSize = size;
+            obj.style.color = color;
+        }
+        // const button = document.getElementById("btn");
+        // const p = document.getElementById("firstP");
+        //console.log(button, p);
         function changeColor() {
             // 버튼객체, 변경 대상인 p 객체
-            // const button = document.getElementById("btn");
-            // const p = document.getElementById("firstP");
+            const button = document.getElementById("btn");
+            const p = document.getElementById("firstP");
             p.style.backgroundColor = 'violet';
-            console.log(`${p.style.color}, ${p.style.backgroundColor}, ${p.innerHTML}`);
+            p.style.color = 'black';
+            p.style.fontSize = '30px';
+            p.style.border = '2px solid gray';
+            p.innerHTML = '팀 버너스 리<img src="image/tim.jpg" width="60px" height="40px">입니다.';
+            //console.log(`${p.style.color}, ${p.style.backgroundColor}, ${p.innerHTML}`);
 
         }
+
+
+
     </script>
 </body>
 
