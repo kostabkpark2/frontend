@@ -76,6 +76,25 @@
         );
         console.log(even);
 
+        // ES6 문법 연습 - JSON 과 객체 간 변환
+        const jsobject = [
+            {
+                name : "홍길동",
+                score : 90
+            } ,
+            {
+                name : "제임스",
+                scroe: 100
+            }
+        ]    
+
+        const json = JSON.stringify(jsobject);
+        console.log(json);
+
+        const object = JSON.parse(json);
+        console.log(object);
+
+
     </script>
 </body>
 </html>

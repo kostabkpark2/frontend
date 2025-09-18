@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dom 객체 알아보기</h1>
+    <hr>
+    <p id="firstP" style="color:blue" onclick="this.style.backgroundColor='yellow'">
+        이것은 <span id="span" style="color:red">문장입니다.</span>
+    </p>
+    <button id="btn" onclick="changeColor()">클릭하세요</button>
+    <script>
+        const button = document.getElementById("btn");
+        const p = document.getElementById("firstP");
+        console.log(button);
+        function changeColor() {
+            // 버튼객체, 변경 대상인 p 객체
+            // const button = document.getElementById("btn");
+            // const p = document.getElementById("firstP");
+            p.style.backgroundColor = 'violet';
+            console.log(`${p.style.color}, ${p.style.backgroundColor}, ${p.innerHTML}`);
+
+        }
+    </script>
+</body>
+
+</html>
