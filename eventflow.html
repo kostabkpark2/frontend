@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border : 1px solid red;
+            margin : 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one
+        <div class="two">two
+            <div class="three">three
+            </div>
+        </div>
+    </div>
+
+    <h1>To do List</h1>
+    <hr>
+    <ul id="itemList">
+        <li class="item">공부하기</li>
+        <li class="item">프로젝트하기</li>
+        
+    </ul>
+
+    <script>
+        document.oncontextmenu = () => {
+            return false;
+        }
+
+
+        let divs = document.querySelectorAll("div");
+        console.log(divs);
+        divs.forEach(
+            (div) => { 
+                div.addEventListener("click", callback);
+            }
+        );
+
+        function callback(event) {
+            console.log(event.currentTarget.className);
+        }
+
+        // 부모 (itemlist) 에 이벤트리스너를 장착, 부모의 이벤트를 자식에게 위임하고 버블링 흐름으로 동작하도록
+        // let items = document.querySelectorAll("li");
+        // console.log(items);
+        // items.forEach(
+        //     (item) => {
+        //         item.addEventListener("click", changeColor);
+        //     }
+        // )
+        let itemList = document.querySelector("#itemList");
+        console.log(itemList);
+        itemList.addEventListener("click", changeColor);
+
+        let li = document.createElement("li");
+        li.innerHTML = "새로 추가함";
+        let ul = document.querySelector("#itemList");
+        ul.appendChild(li);
+
+        li = document.createElement("li");
+        li.innerHTML = "두번째 추가함";
+        li.addEventListener("click", changeColor);
+        ul.appendChild(li);
+        
+
+        function changeColor(event) {
+            //alert("클릭됨");
+            event.target.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>

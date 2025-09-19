@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <script>
+    let expr = document.querySelector("#expr");
+    let result = document.querySelector("#result");
+    result.value=eval(expr.value);
+</script> -->
+<body onload="changeColor()">
+    <!--  -->
+    <h1>계산기</h1>
+    <hr>
+    <form action="" onsubmit="calculate(event)">
+
+        <label for="expr">계산식</label>
+        <input type="text" id="expr"> <br>
+
+        <label for="result">결과</label>
+        <input type="text" id="result" disabled>
+        <input type="submit" value="계산">
+        <button type="reset">초기화</button>
+
+
+    </form>
+
+    <img src="" alt="">
+
+
+    <script>
+        let img = document.querySelector("img");
+        img.src = "image/bg3.jpg";
+        // img.addEventListener("load", () => {
+        //     console.log(img.width);
+        // });
+        img.onload = () => {
+            console.log(img.width);
+        };
+
+
+        function calculate(e) {
+            e.preventDefault();
+            let expr = document.querySelector("#expr");
+
+            let result = document.querySelector("#result");
+            result.value=eval(expr.value);
+        }
+
+        function changeColor() {
+            document.body.style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>
