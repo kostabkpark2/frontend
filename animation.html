@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // box 를 클릭하면 (x 축만 이동) 1초 동안, 오른쪽으로 1000px 위치로 이동 
+        // this 는 화살표 함수에 적을 수 없으므로 function () { } 으로 작성해줘야 함.
+        // $(
+        //     () => {
+        //         $('.box').click(function () {
+        //             $(this).animate({
+        //                     left : 1000
+        //             }, 2000)
+        //         })
+        //     })
+        // or 화살표 함수를 사용하려면 e 객체를 매개변수로 받아야 함.
+        $(
+            () => {
+                $('.box').click( (e) => {
+                    $(e.currentTarget).animate({
+                            left : 1000
+                    }, 2000)
+                })
+            })
+
+    </script>
+    <style>
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            position: absolute;
+            top : 10px;
+            left : 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
