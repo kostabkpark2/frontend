@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/jquery-3.7.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // let pList = document.getElementsByTagName("p");
+
+        // for (const p of pList) {
+        //     p.className = "selected";
+        // }
+        // $(document).ready(
+        //     () => {
+        //         $(".ex").addClass("selected");
+        //     }
+        // )
+        // $(
+        //     () => {
+        //         $(".ex").addClass("selected");
+        //     }
+        // )
+        
+
+    </script>
+</head>
+<body>
+    <h1>jquery 연습</h1>
+    <hr>
+    <p class="ex">p</p>
+    <p class="ex">p</p>
+    <p class="ex">p</p>
+    <button id="hide">숨기기</button>
+    <button id="color">배경색 변경</button>
+    <script>
+        $(".ex").addClass("selected");
+        $("#hide").click( 
+            () => {
+                $("p").hide();
+            }
+        )
+        $("#color").click(
+            () => {
+                $("body").css('backgroundColor', "yellow");
+            }
+        )
+    </script>
+</body>
+</html>
