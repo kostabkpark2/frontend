@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>라디오 버튼을 선택하면 이미지가 변경됩니다.</h1>
+    <hr>
+    <form action="">
+        <input type="radio" name="tools" id="eclipse" checked onchange="changeImage(event)">
+        <label for="eclipse">eclipse</label>
+        <input type="radio" name="tools" id="vscode" onchange="changeImage(event)">
+        <label for="vscode">vscode</label>
+        <input type="radio" name="tools" id="intellij" onchange="changeImage(event)">
+        <label for="intellij">intellij</label>
+        <input type="submit" onclick="changeImage(event)" value="선택">
+        <img src="" alt="img" id="img">
+    </form>
+
+    <script>
+        let arr = ["eclipse.jfif", "vscode.jfif","intellij.jfif"]
+        function changeImage(e) {
+            e.preventDefault();
+            // 어떤 것이 선택되었는지 알아낸다.
+            let inputs = document.getElementsByName("tools");
+            let img = document.getElementById("img");
+            let found = null;
+            inputs.forEach(
+                (ele, index) => {
+                    if(ele.checked) {
+                        found = index;
+                    }
+                    
+                }
+            )
+            console.log(found, arr[found]);
+            // 선택된 index 를 이용해서 해당 이미지를 렌더링한다.
+            if(found != null) {
+
+                img.src = "image/" + arr[found];
+                console.log(img.src);
+            }
+        }
+
+    </script>
+</body>
+</html>

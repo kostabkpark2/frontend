@@ -25,6 +25,12 @@
     <script>
         function calculate(obj) {
             let amount = document.querySelector("#amount");
+            if(obj.checked) {
+                amount.value =  parseInt(amount.value) +  parseInt(obj.value);
+            } else {
+                amount.value =  parseInt(amount.value) -  parseInt(obj.value);
+            }
+            
             console.log(obj.value, amount.value);
         }
 
