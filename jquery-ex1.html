@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>header 1</h1>
+        <h1>header 2</h1>
+        <h1>header 3</h1>
+        <h1>header <span>4</span></h1>
+    </div>
+    
+    <script>
+        // $(
+        //     () => {
+        //         const headers = $("h1");
+        //         for (let index = 0; index < headers.length; index++) {
+        //             if(index % 2 == 1) {
+        //                 const element = headers.get(index);
+        //                 $(element).css('backgroundColor', 'yellow');
+        //             }
+        //         }
+        //     }
+        // )
+
+        $(
+            () => {
+                $("h1").each(
+                    (index, item) => {
+                        if(index % 2 == 1) {
+                            $(item).css({
+                                color:"red",
+                                backgroundColor : "yellow"
+                            })
+                            console.log($(item).text());
+                        } else {
+                            $(item).html("<span>span</span>");
+                        }
+                    }
+                )
+            }
+        )
+
+
+        // $(
+        //     () => {
+        //         $("#container>h1:nth-child(even)").css('backgroundColor', 'yellowgreen');
+        //     }
+        // )
+    </script>
+</body>
+</html>
